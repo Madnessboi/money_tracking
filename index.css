@@ -1,0 +1,362 @@
+.body_fixed {
+  overflow: hidden;
+}
+
+ol {
+  counter-reset: item;
+  margin-left: 0;
+  padding-left: 0;
+  align-items: start;
+}
+li {
+  display: block;
+  margin-bottom: 0.5em;
+  margin-left: 2em;
+}
+
+li:before {
+  display: inline-block;
+  content: counter(item) ".";
+  counter-increment: item;
+  width: 2em;
+}
+
+.container {
+  width: 1150px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rub {
+  align-items: start;
+  text-align-last: left;
+}
+
+.app-title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-family: "Tenor Sans", sans-serif;
+
+  margin-bottom: 150px;
+}
+
+.app-name-2 {
+  color: rgb(241, 167, 77);
+}
+
+.input__wrapper {
+  display: flex;
+  justify-content: center;
+  padding-left: 250px;
+  gap: 45px;
+}
+
+.expense-input {
+  width: 350px;
+  height: 20px;
+
+  margin-bottom: 30px;
+}
+
+.dropdown {
+  height: 25px;
+}
+
+.dropdown__content {
+}
+
+.dropdown__options {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align-last: left;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown__options button {
+  color: black;
+  padding: 5px 5px;
+  margin: 0;
+  text-decoration: none;
+  display: block;
+
+  border: none;
+  cursor: pointer;
+
+  background-color: white;
+
+  transition-duration: 0.3s;
+}
+
+.dropdown__options button:hover {
+  background-color: rgb(241, 167, 77);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.dropdown__btn {
+  width: 200px;
+  height: 30px;
+  text-align-last: left;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+  gap: 30px;
+}
+
+.add-btn {
+  margin-bottom: 50px;
+
+  width: 200px;
+  height: 50px;
+
+  border: none;
+  border-radius: 25px;
+
+  background-color: rgb(241, 167, 77);
+
+  color: white;
+
+  font-size: 20px;
+  font-family: "Red Hat Mono", sans-serif;
+
+  cursor: pointer;
+
+  transition-duration: 0.3s;
+}
+
+.clean-btn {
+  width: 200px;
+  height: 50px;
+
+  border: none;
+  border-radius: 25px;
+
+  background-color: black;
+
+  color: white;
+
+  font-size: 20px;
+  font-family: "Red Hat Mono", sans-serif;
+
+  cursor: pointer;
+
+  transition-duration: 0.3s;
+}
+
+.clean-btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.add-btn:hover {
+  background-color: white;
+  color: rgb(241, 167, 77);
+  border: 1px solid rgb(241, 167, 77);
+}
+
+.bottom__section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left-side {
+  width: 300px;
+  height: 250px;
+  background-color: rgb(241, 167, 77);
+  border-radius: 20px;
+  color: white;
+
+  font-weight: 400;
+  font-family: "Red Hat Mono", sans-serif;
+}
+
+.history {
+}
+
+.right-side {
+  width: 300px;
+  height: 250px;
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+
+  font-weight: 400;
+  font-family: "Red Hat Mono", sans-serif;
+}
+
+.limit {
+  position: relative;
+  display: flex;
+}
+
+.limit-text {
+  font-size: 20px;
+  margin: 0;
+  margin-right: 15px;
+}
+
+.limit-edit-btn {
+  width: 20px;
+  height: 20px;
+
+  border: none;
+
+  cursor: pointer;
+
+  background-color: black;
+
+  background-image: url(img/limit_edit_icn.png);
+  background-size: contain;
+}
+
+.score-info {
+  align-items: start;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.score-details-btn {
+  display: block;
+  width: 200px;
+  height: 40px;
+
+  border-radius: 20px;
+  border: none;
+
+  background-color: rgb(241, 167, 77);
+  color: white;
+
+  font-size: 20px;
+  font-family: "Red Hat Mono", sans-serif;
+
+  cursor: pointer;
+
+  margin-left: 35px;
+  text-align: center;
+
+  transition-duration: 0.4s;
+}
+
+.score-details-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.status_green {
+  color: green;
+}
+
+.status_yellow {
+  color: yellow;
+}
+
+.status_orange {
+  color: orange;
+}
+
+.status_red {
+  color: red;
+}
+
+.popup__limit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 280px;
+  padding-top: 350px;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.5s ease;
+}
+
+.popup_open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__close-btn {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+
+  width: 40px;
+  height: 40px;
+
+  padding-bottom: 22px;
+}
+
+.popup__limit-content {
+  position: relative;
+  display: flex;
+  width: 400px;
+  height: 40px;
+  max-height: 100%;
+  padding: 20px;
+  background-color: black;
+  color: white;
+
+  gap: 10px;
+
+  border-radius: 15px;
+
+  font-family: "Red Hat Mono", sans-serif;
+}
+
+.popup__limit-text {
+  margin: 0;
+}
+
+.popup__limit-save {
+  width: 125px;
+  height: 25px;
+  background-color: rgb(241, 167, 77);
+  border: none;
+  color: white;
+  margin-top: 7px;
+
+  border-radius: 25px;
+
+  cursor: pointer;
+
+  transition-duration: 0.3s;
+}
+
+.popup__limit-save:hover {
+  background-color: white;
+  color: black;
+}
+
+.popup__limit-input {
+  margin-top: 7px;
+  width: 200px;
+  height: 20px;
+}
